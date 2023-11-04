@@ -18,8 +18,8 @@ class Food{
     change(){
         //然后在生成一个随机数
         //蛇移动一格的距离是20，然后现在总的长度是760.其中math.round是一个取值
-        let left = Math.round(Math.random()*76)*10
-        let top = Math.round(Math.random()*52)*10
+        let left = Math.round(Math.random()*37)*20
+        let top = Math.round(Math.random()*25)*20
         this.element.style.left = left + 'px';
         this.element.style.top = top + 'px';
     }
