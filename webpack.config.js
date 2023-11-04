@@ -1,3 +1,4 @@
+
 // 引入一个包
 const path = require('path');
 // 引入html插件
@@ -19,7 +20,7 @@ module.exports = {
         filename: "bundle.js",
 
         // 告诉webpack不使用箭头
-        environment:{
+        environment: {
             arrowFunction: false
         }
     },
@@ -37,25 +38,25 @@ module.exports = {
                     // 配置babel
                     {
                         // 指定加载器
-                        loader:"babel-loader",
+                        loader: "babel-loader",
                         // 设置babel
                         options: {
                             // 设置预定义的环境
-                            presets:[
+                            presets: [
                                 [
                                     // 指定环境的插件
                                     "@babel/preset-env",
                                     // 配置信息
                                     {
                                         // 要兼容的目标浏览器
-                                        targets:{
-                                            "chrome":"58",
-                                            "ie":"11"
+                                        targets: {
+                                            "chrome": "58",
+                                            "ie": "11"
                                         },
                                         // 指定corejs的版本
-                                        "corejs":"3",
+                                        "corejs": "3",
                                         // 使用corejs的方式 "usage" 表示按需加载
-                                        "useBuiltIns":"usage"
+                                        "useBuiltIns": "usage"
                                     }
                                 ]
                             ]
@@ -106,5 +107,4 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.js']
     }
-
 };
